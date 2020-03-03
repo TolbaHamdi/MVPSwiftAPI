@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		7E6F1900240E7417004CB333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F18FF240E7417004CB333 /* Assets.xcassets */; };
 		7E6F1903240E7417004CB333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F1901240E7417004CB333 /* LaunchScreen.storyboard */; };
 		7E6F1915240ED158004CB333 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F1914240ED158004CB333 /* API.swift */; };
+		7E6F1918240ED89B004CB333 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F1917240ED89B004CB333 /* Users.swift */; };
+		7E6F191E240EDCE9004CB333 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F191D240EDCE9004CB333 /* UsersInteractor.swift */; };
 		EE7122879C8708C61522167C /* Pods_MVPSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D80C78DFD1ADF23308375D9 /* Pods_MVPSwiftAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		7E6F1902240E7417004CB333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E6F1904240E7417004CB333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E6F1914240ED158004CB333 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7E6F1917240ED89B004CB333 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		7E6F191D240EDCE9004CB333 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
 		BD6F8A64C7D8C1FE88F0888D /* Pods-MVPSwiftAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSwiftAPI.debug.xcconfig"; path = "Target Support Files/Pods-MVPSwiftAPI/Pods-MVPSwiftAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		F5B03A14A7153C43439CFFE1 /* Pods-MVPSwiftAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSwiftAPI.release.xcconfig"; path = "Target Support Files/Pods-MVPSwiftAPI/Pods-MVPSwiftAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,12 +51,6 @@
 		7E6F18EA240E7416004CB333 = {
 			isa = PBXGroup;
 			children = (
-				7E6F1913240ED115004CB333 /* NetworkLayer */,
-				7E6F1912240ED0D7004CB333 /* Scenes */,
-				7E6F190D240E75F6004CB333 /* AppDelegates */,
-				7E6F190C240E75DC004CB333 /* Resources */,
-				7E6F190B240E757A004CB333 /* Configuration */,
-				7E6F190A240E752F004CB333 /* Storyboards */,
 				7E6F18F5240E7416004CB333 /* MVPSwiftAPI */,
 				7E6F18F4240E7416004CB333 /* Products */,
 				98907F284A023EAC2FF5E656 /* Pods */,
@@ -71,6 +69,13 @@
 		7E6F18F5240E7416004CB333 /* MVPSwiftAPI */ = {
 			isa = PBXGroup;
 			children = (
+				7E6F1916240ED873004CB333 /* Model */,
+				7E6F1913240ED115004CB333 /* NetworkLayer */,
+				7E6F1912240ED0D7004CB333 /* Scenes */,
+				7E6F190D240E75F6004CB333 /* AppDelegates */,
+				7E6F190C240E75DC004CB333 /* Resources */,
+				7E6F190B240E757A004CB333 /* Configuration */,
+				7E6F190A240E752F004CB333 /* Storyboards */,
 			);
 			path = MVPSwiftAPI;
 			sourceTree = "<group>";
@@ -112,7 +117,7 @@
 		7E6F1912240ED0D7004CB333 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7E6F18FA240E7416004CB333 /* ViewController.swift */,
+				7E6F1919240EDAA9004CB333 /* Users */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -125,13 +130,53 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		7E6F1916240ED873004CB333 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F1917240ED89B004CB333 /* Users.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E6F1919240EDAA9004CB333 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F191C240EDB0C004CB333 /* Interactor */,
+				7E6F191B240EDAF0004CB333 /* Presenter */,
+				7E6F191A240EDADC004CB333 /* View */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		7E6F191A240EDADC004CB333 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F18FA240E7416004CB333 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E6F191B240EDAF0004CB333 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7E6F191C240EDB0C004CB333 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F191D240EDCE9004CB333 /* UsersInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		98907F284A023EAC2FF5E656 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				BD6F8A64C7D8C1FE88F0888D /* Pods-MVPSwiftAPI.debug.xcconfig */,
 				F5B03A14A7153C43439CFFE1 /* Pods-MVPSwiftAPI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,7 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E6F18FB240E7416004CB333 /* ViewController.swift in Sources */,
+				7E6F191E240EDCE9004CB333 /* UsersInteractor.swift in Sources */,
 				7E6F18F7240E7416004CB333 /* AppDelegate.swift in Sources */,
+				7E6F1918240ED89B004CB333 /* Users.swift in Sources */,
 				7E6F1915240ED158004CB333 /* API.swift in Sources */,
 				7E6F18F9240E7416004CB333 /* SceneDelegate.swift in Sources */,
 			);
@@ -407,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Configuration/Info.plist;
+				INFOPLIST_FILE = MVPSwiftAPI/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Configuration/Info.plist;
+				INFOPLIST_FILE = MVPSwiftAPI/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

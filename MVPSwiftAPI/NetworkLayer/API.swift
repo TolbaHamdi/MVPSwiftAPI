@@ -1,9 +1,9 @@
 //
 //  API.swift
-//  Generics with Codable and Alamofire
+//  MVPSwiftAPI
 //
-//  Created by Mohamed Arafa on 12/25/19.
-//  Copyright © 2019 MockSolution. All rights reserved.
+//  Created by TolBA on 3/3/20.
+//  Copyright © 2020 TolBA. All rights reserved.
 //
 
 import Foundation
