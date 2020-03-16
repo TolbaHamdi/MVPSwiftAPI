@@ -6,10 +6,7 @@
 //  Copyright © 2020 TolBA. All rights reserved.
 //
 
-import UIKit
-import Alamofire
-import Kingfisher
-
+import Foundation
 
 protocol UsersView: class {
     var presenter: UsersVCPresenter? { get set }
@@ -70,6 +67,10 @@ class UsersVCPresenter {
         cell.displayImage(url: user.avatar!)
     }
     
+    func didSelectRow(index: Int) {
+        let user = users[index]
+        router.navigateToUserTodosScreen(from: view, user: user)
+    }
     
 }
 

@@ -20,4 +20,11 @@ class UsersVCRouter{
         usersVC.presenter = presenter
         return root
     }
+    
+    func navigateToUserTodosScreen(from view: UsersView?, user: User) {
+        let userDetailsView = UserTodoVCRouter.createUserTodoVC(user: user)
+        if let viewController = view as? UIViewController {
+            viewController.navigationController?.pushViewController(userDetailsView, animated: true)
+        }
+    }
 }

@@ -47,7 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func setNavRootController() {
-        window?.rootViewController = UsersVCRouter.createUsersVC()
+        window?.rootViewController =  UsersVCRouter.createUsersVC()
         window?.makeKeyAndVisible()
     }
 
