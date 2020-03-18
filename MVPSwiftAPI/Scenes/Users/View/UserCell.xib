@@ -31,18 +31,39 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVg-DN-gR5">
-                        <rect key="frame" x="100" y="69" width="40.5" height="21"/>
+                        <rect key="frame" x="100" y="60" width="40.5" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxD-dz-4Bp">
+                        <rect key="frame" x="277" y="10" width="42" height="30"/>
+                        <color key="backgroundColor" red="0.94735461470000004" green="0.2447766066" blue="0.39759728309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="P3M-K3-OY2"/>
+                        </constraints>
+                        <state key="normal" title="Todos"/>
+                    </button>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbg-ym-lWX">
+                        <rect key="frame" x="277" y="60" width="42" height="30"/>
+                        <color key="backgroundColor" red="0.94735461470000004" green="0.2447766066" blue="0.39759728309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="d3c-eI-3pa"/>
+                        </constraints>
+                        <state key="normal" title="Posts"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fVg-DN-gR5" firstAttribute="bottom" secondItem="A71-12-JZb" secondAttribute="bottom" id="7p0-vk-Ymp"/>
                     <constraint firstItem="MLR-Qx-wnu" firstAttribute="top" secondItem="A71-12-JZb" secondAttribute="top" id="8cA-gg-lGJ"/>
+                    <constraint firstItem="zbg-ym-lWX" firstAttribute="top" secondItem="fVg-DN-gR5" secondAttribute="top" id="CT9-Ez-HMu"/>
                     <constraint firstItem="MLR-Qx-wnu" firstAttribute="leading" secondItem="A71-12-JZb" secondAttribute="trailing" constant="10" id="D83-JM-4Gp"/>
+                    <constraint firstAttribute="trailing" secondItem="oxD-dz-4Bp" secondAttribute="trailing" constant="5" id="Q72-1A-Wjf"/>
+                    <constraint firstAttribute="trailing" secondItem="zbg-ym-lWX" secondAttribute="trailing" constant="5" id="Uuv-6R-ghC"/>
                     <constraint firstItem="fVg-DN-gR5" firstAttribute="leading" secondItem="A71-12-JZb" secondAttribute="trailing" constant="10" id="YCy-rQ-q20"/>
                     <constraint firstAttribute="bottom" secondItem="A71-12-JZb" secondAttribute="bottom" constant="10" id="bYB-ua-QZ2"/>
+                    <constraint firstItem="oxD-dz-4Bp" firstAttribute="top" secondItem="MLR-Qx-wnu" secondAttribute="top" id="oZt-V8-thc"/>
+                    <constraint firstAttribute="bottom" secondItem="zbg-ym-lWX" secondAttribute="bottom" constant="10" id="scf-rH-OgN"/>
                     <constraint firstItem="A71-12-JZb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vgm-B6-vAf"/>
                     <constraint firstItem="A71-12-JZb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="viB-3j-goM"/>
                 </constraints>
@@ -50,6 +71,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="emailLB" destination="fVg-DN-gR5" id="Fvh-Xx-fvV"/>
+                <outlet property="postsBtn" destination="zbg-ym-lWX" id="7TN-D0-HIy"/>
+                <outlet property="todosBtn" destination="oxD-dz-4Bp" id="oQv-Ij-8Sz"/>
                 <outlet property="userAvatar" destination="A71-12-JZb" id="uvy-hk-BpK"/>
                 <outlet property="userNameLB" destination="MLR-Qx-wnu" id="x2Z-8Q-gwJ"/>
             </connections>

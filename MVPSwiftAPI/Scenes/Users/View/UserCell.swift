@@ -16,6 +16,8 @@ class UserCell: UITableViewCell, UserCellView {
     @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var userNameLB: UILabel!
     @IBOutlet weak var emailLB: UILabel!
+    @IBOutlet weak var todosBtn: UIButton!
+    @IBOutlet weak var postsBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

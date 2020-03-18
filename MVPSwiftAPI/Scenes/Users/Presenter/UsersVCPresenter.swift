@@ -14,7 +14,6 @@ protocol UsersView: class {
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error: String)
-    //func navigateToUserDetailsScreen(user: User)
 }
 
 protocol UserCellView {
@@ -67,10 +66,13 @@ class UsersVCPresenter {
         cell.displayImage(url: user.avatar!)
     }
     
-    func didSelectRow(index: Int) {
+    func didSelectRow(index: Int,tag: Int) {
         let user = users[index]
-        router.navigateToUserTodosScreen(from: view, user: user)
+        if tag == 0{
+            router.navigateToUserTodosScreen(from: view, user: user)
+        }else{
+            router.navigateToUserPostsScreen(from: view, user: user)
+        }
     }
-    
 }
 

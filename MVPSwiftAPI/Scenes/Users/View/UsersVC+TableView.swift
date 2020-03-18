@@ -24,10 +24,20 @@ extension UsersVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         cell.userAvatar.image = #imageLiteral(resourceName: "background").circleMasked
         presenter?.configure(cell: cell, for: indexPath.row)
+        
+        cell.todosBtn.tag = indexPath.row
+        cell.todosBtn.addTarget(self, action: #selector(self.todosBtnTapped(_:)), for: .touchUpInside)
+        
+        cell.postsBtn.tag = indexPath.row
+        cell.postsBtn.addTarget(self, action: #selector(self.postsBtnTapped(_:)), for: .touchUpInside)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectRow(index: indexPath.row)
+    @objc func todosBtnTapped(_ sender: UIButton){
+        presenter?.didSelectRow(index: sender.tag, tag: 0)
+    }
+    
+    @objc func postsBtnTapped(_ sender: UIButton){
+        presenter?.didSelectRow(index: sender.tag, tag: 1)
     }
 }

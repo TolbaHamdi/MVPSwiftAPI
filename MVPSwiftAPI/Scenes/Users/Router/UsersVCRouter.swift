@@ -22,9 +22,16 @@ class UsersVCRouter{
     }
     
     func navigateToUserTodosScreen(from view: UsersView?, user: User) {
-        let userDetailsView = UserTodoVCRouter.createUserTodoVC(user: user)
+        let userTodosView = UserTodoVCRouter.createUserTodoVC(user: user)
         if let viewController = view as? UIViewController {
-            viewController.navigationController?.pushViewController(userDetailsView, animated: true)
+            viewController.navigationController?.pushViewController(userTodosView, animated: true)
+        }
+    }
+    
+    func navigateToUserPostsScreen(from view: UsersView?, user: User) {
+        let userPostsView = UserPostsVCRouter.createUserPostsVC(user: user)
+        if let viewController = view as? UIViewController {
+            viewController.navigationController?.pushViewController(userPostsView, animated: true)
         }
     }
 }

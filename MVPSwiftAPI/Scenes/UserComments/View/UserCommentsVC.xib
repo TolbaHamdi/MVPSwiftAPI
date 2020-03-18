@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCommentsVC" customModule="MVPSwiftAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="indicatorActivity" destination="O49-C1-cBA" id="btZ-sd-yU4"/>
+                <outlet property="postTxtLB" destination="aFU-QK-wuh" id="I3x-fi-qxK"/>
+                <outlet property="tableView" destination="Y90-Df-y2R" id="NDW-0a-hJw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFi-zL-nWY">
+                    <rect key="frame" x="5" y="49" width="51" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="Qkc-xb-d5h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="post body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFU-QK-wuh">
+                    <rect key="frame" x="59" y="49" width="350" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y90-Df-y2R">
+                    <rect key="frame" x="10" y="79.5" width="394" height="782.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="O49-C1-cBA">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fFi-zL-nWY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="1nk-LB-epR"/>
+                <constraint firstItem="O49-C1-cBA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DON-Qh-XCc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aFU-QK-wuh" secondAttribute="trailing" constant="5" id="HoD-1j-iYK"/>
+                <constraint firstItem="aFU-QK-wuh" firstAttribute="leading" secondItem="fFi-zL-nWY" secondAttribute="trailing" constant="3" id="MXb-Ja-0Qg"/>
+                <constraint firstItem="O49-C1-cBA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Pe1-ck-6TI"/>
+                <constraint firstItem="aFU-QK-wuh" firstAttribute="top" secondItem="fFi-zL-nWY" secondAttribute="top" id="aXA-4C-HRv"/>
+                <constraint firstItem="Y90-Df-y2R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="fbw-PC-Sxl"/>
+                <constraint firstItem="Y90-Df-y2R" firstAttribute="top" secondItem="aFU-QK-wuh" secondAttribute="bottom" constant="10" id="kYr-69-Vmu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y90-Df-y2R" secondAttribute="trailing" constant="10" id="tdM-zm-3nX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y90-Df-y2R" secondAttribute="bottom" id="wqb-oM-wVR"/>
+                <constraint firstItem="fFi-zL-nWY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="xPL-bx-gpD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-235" y="12"/>
+        </view>
+    </objects>
+</document>
